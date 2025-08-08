@@ -307,19 +307,19 @@ const Section5 = () => {
                 current == 1 ?
                 <>
                   <b> ROS2 프로젝트 </b>
-                  <b>- 대형병원 안내 로봇 시스템 </b> 
+                  <b>- 대형병원 안내 로봇 서비스 </b> 
                 </>
                 :
                 current == 2 ?
                 <>
                   <b> Deep Learning 프로젝트  </b>
-                  <b>- 무인매장 CCTV 단속 시스템 </b>
+                  <b>- 무인매장 CCTV 불법행위 단속 서비스 </b>
                 </>
                 :
                 current == 3 ?
                 <>
-                  <b> IoT Learning 프로젝트  </b>
-                  <b>- 자동 물류 시스템 </b>
+                  <b> EDA 프로젝트  </b>
+                  <b>- 실시간 주식 예측 서비스 </b>
                 </>
                 : <> </>
               }
@@ -332,7 +332,7 @@ const Section5 = () => {
               <div> 매장주인 GUI 통계 시각화 화면 </div>
               :
               current == 3 ?
-              <div> 일반인 이해를 위한 간소화 시나리오 PPT </div>
+              <div> 주식 예측 결과 화면 </div>
               : <></>
             }
           </div>
