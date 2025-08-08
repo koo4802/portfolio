@@ -1,0 +1,155 @@
+@charset "UTF-8";
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes jump1 {
+  0%, 50% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes jump2 {
+  20%, 70% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(-20px);
+  }
+}
+@keyframes jump3 {
+  40%, 90% {
+    transform: translateY(0);
+  }
+  65% {
+    transform: translateY(-20px);
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* 초기 로딩 시 스크롤 방지 */
+}
+
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  z-index: 10000;
+  transition: opacity 1s ease-out; /* 1초 동안 서서히 투명해지도록 설정 */
+}
+#loading.hidden {
+  opacity: 0;
+  pointer-events: none; /* 로딩 창이 사라진 후 클릭 이벤트를 막지 않도록 설정 */
+}
+#loading .circle-text {
+  position: absolute;
+  background-image: url("./circle-text.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 360px;
+  height: 360px;
+  animation: rotation linear 10s infinite;
+}
+#loading .logo {
+  display: flex;
+  align-items: center;
+}
+#loading .logo-m {
+  width: 44px;
+  height: 38px;
+  background-color: rgb(0, 186, 215);
+  mask-image: url("./logo-m.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: 0 0;
+  -webkit-mask-image: url("./logo-m.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: 0 0;
+  transition: 0.3s;
+  margin-right: 1px;
+  animation: jump1 1s infinite;
+}
+#loading .logo-i {
+  width: 10px;
+  height: 38px;
+  background-color: rgb(0, 186, 215);
+  mask-image: url("./logo-i.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: 0 0;
+  -webkit-mask-image: url("./logo-i.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: 0 0;
+  transition: 0.3s;
+  margin-right: 3px;
+  animation: jump2 1s infinite;
+}
+#loading .logo-n {
+  width: 33px;
+  height: 38px;
+  background-color: rgb(0, 186, 215);
+  mask-image: url("./logo-n.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: 0 0;
+  -webkit-mask-image: url("./logo-n.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: 0 0;
+  transition: 0.3s;
+  margin-right: 3px;
+  animation: jump3 1s infinite;
+}
+#loading .logo-j {
+  width: 28px;
+  height: 39px;
+  background-color: #96DFEB;
+  mask-image: url("./logo-j.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: 0 0;
+  -webkit-mask-image: url("./logo-j.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: 0 0;
+  transition: 0.3s;
+  margin-right: 3px;
+  animation: jump1 1s infinite;
+}
+#loading .logo-e {
+  width: 27px;
+  height: 38px;
+  background-color: #96DFEB;
+  mask-image: url("./logo-e.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: 0 0;
+  -webkit-mask-image: url("./logo-e.svg");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  -webkit-mask-position: 0 0;
+  transition: 0.3s;
+  margin-right: 3px;
+  animation: jump2 1s infinite;
+}
+
+#root {
+  display: none;
+}
+
+/*# sourceMappingURL=styles.css.map */
